@@ -15,16 +15,37 @@
 	<link type="text/css" rel="stylesheet"
 		href="#{request.contextPath}/css/main.css" />
 
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" />
 
+	<style type="text/css">
+.ui-datalist .ui-datalist-content {
+	border: 0 none
+}
 
+.ui-datalist ul {
+	padding: 0px 10px 0 20px;
+	margin: 5px 0;
+}
+
+.value {
+	font-weight: bold;
+}
+
+.ui-autocomplete-itemtip {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+</style>
 
 
 </h:head>
 
 
 <h:body>
+
+
 
 
 	<div class="cabecalho"
@@ -55,7 +76,7 @@
 						<table style="height: 270px; width: 300px;">
 							<tr>
 								<th><a id="athleticoPr" href="#"
-									title="Athletico Paranaense"> <img id="athleticoPr"
+									title="Athletico Paranaense" onclick="teste()"> <img
 										class="mosaico_escudo arrumarTamanho"
 										src="img/times/AthleticoPR.png" />
 								</a></th>
@@ -140,7 +161,7 @@
 								<td><a id="internacional" href="#" title="Internacional"><img
 										class="mosaico_escudo" src="img/times/Internacional.png" /> </a>
 								</td>
-								
+
 								<td><a id="palmeiras" href="#" title="Palmeiras"><img
 										class="mosaico_escudo arrumarTamanho"
 										src="img/times/Palmeiras.png" /> </a></td>
@@ -443,10 +464,27 @@
 
 				<h:form>
 
+
+					<!--   <div>
+
+						<input id="teste2" value="#{camisa.txt1}" />
+
+					</div>  -->
+
+
+
+
+					<p:inputText id="teste2"> Time: </p:inputText>
+
+					<div class="ajustandoEspacos"></div>
+
 					<h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="3">
+
+
+
 						<p:outputLabel for="tamanhoCamisa" value="Tamanho:" />
 						<p:selectOneRadio id="tamanhoCamisa"
-							value="#{tamanhoCamisa.tamanhoCamisa}" unselectable="true">
+							value="#{camisa.tamanhoCamisa}" unselectable="true">
 
 							<table>
 								<tr>
@@ -459,6 +497,14 @@
 
 						</p:selectOneRadio>
 
+
+						<p:outputLabel for="quantidade" value="Quantidade: " />
+						<p:inputText id="quantidade" value="#{camisa.quantidade}"
+							type="number" maxlength="2" />
+
+
+						<div class="ajustandoEspacos"></div>
+						<div class="ajustandoEspacos"></div>
 
 						<button class="btn btn-primary" type="submit">Continuar</button>
 

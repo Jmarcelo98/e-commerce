@@ -1,24 +1,3 @@
-/*function Mudarestado(el) {
-	var display = document.getElementById(el).style.display;
-	if (display == "none")
-		document.getElementById(el).style.display = 'block';
-	else
-		document.getElementById(el).style.display = 'none';
-}
- */
-/*function Mudarestado(el) { var display =
- document.getElementById(el).style.display; if(display == "none")
- document.getElementById(el).style.display = 'block'; else
- document.getElementById(el).style.display = 'none'; }*/
-
-/*$(function() {
- $("#athleticoPr").click(function(e) {
- e.preventDefault();
- el = $(this).data('element');
- $(el).toggle();
- });
- });*/
-
 $(function() {
 	abaProdutos();
 })
@@ -29,15 +8,25 @@ function abaProdutos() {
 	$("#athleticoPr")
 			.click(
 					function(event) {
+
+						var teste = 1;
+
+						alert(teste);
+						
+
 						event.preventDefault();
+
 						$(
 								'.atleMg, .avai, .bahia, .botafogo, .ceara, .chapecoense, .corinthians, .cruzeiro, .csa, .flamengo, .fluminense, .fortaleza, .gremio, .goias, .internacional, .palmeiras, .santos, .saoPaulo, .vasco')
 								.fadeOut();
+
 						setTimeout(function() {
 							$('.atlePr').fadeIn();
 						}, 400);
 
-					});
+					}
+
+			);
 
 	$("#atleticoMg")
 			.click(
@@ -46,6 +35,7 @@ function abaProdutos() {
 						$(
 								'.atlePr, .avai, .bahia, .botafogo, .ceara, .chapecoense, .corinthians, .cruzeiro, .csa, .flamengo, .fluminense, .fortaleza, .gremio, .goias, .internacional, .palmeiras, .santos, .saoPaulo, .vasco')
 								.fadeOut();
+
 						setTimeout(function() {
 							$('.atleMg').fadeIn();
 						}, 400);
