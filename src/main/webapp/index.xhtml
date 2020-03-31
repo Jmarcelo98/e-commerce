@@ -8,10 +8,15 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>LOUCOS POR FUTEBOL STORE</title>
 
-	<link rel="stylesheet" type="text/css" href="css/main.css" />
-	<link rel="stylesheet" href="js/main.js" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" type="text/javascript" href="js/main.js" />
 	<link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
 	<link rel="stylesheet" href="bootstrap/bootstrap.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/css/main.css" />
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 
 
@@ -50,31 +55,35 @@
 						<table style="height: 270px; width: 300px;">
 							<tr>
 								<th><a id="athleticoPr" href="#"
-									title="Athletico Paranaense"> <img
+									title="Athletico Paranaense"> <img id="athleticoPr"
 										class="mosaico_escudo arrumarTamanho"
 										src="img/times/AthleticoPR.png" />
 								</a></th>
 
 
-
-								<th><a href="#" title="Atlético Goianiense"><img
+								<!-- <th><a id="atleticoGo" href="#" title="Atlético Goianiense"><img
 										class="mosaico_escudo" src="img/times/AtleticoGO.png" /></a></th>
+ -->
 
 
 
+								<th><a id="atleticoMg" href="#" title="Atlético Mineiro">
+										<img class="mosaico_escudo arrumarTamanho"
+										title="Atlético Mineiro" src="img/times/AtleticoMG.png" />
+								</a></th>
 
-								<th><a href="#" title="Atlético Mineiro"> <img
-										class="mosaico_escudo arrumarTamanho" title="Atlético Mineiro"
-										src="img/times/AtleticoMG.png" /></a></th>
+
+								<th><a id="avai" href="#" title="Avaí"><img
+										class="mosaico_escudo arrumarTamanho" src="img/times/Avai.png" /></a></th>
 
 
-								<th><a href="#" title="Bahia"> <img
+								<th><a id="bahia" href="#" title="Bahia"> <img
 										class="mosaico_escudo" src="img/times/Bahia.png" /></a></th>
 
 
 
 
-								<th><a href="#" title="Botafogo"><img
+								<th><a id="botafogo" href="#" title="Botafogo"><img
 										class="mosaico_escudo" src="img/times/Botafogo.png" /></a></th>
 
 							</tr>
@@ -82,80 +91,90 @@
 
 							<tr>
 
-								<td><a href="#" title="Bragantino"><img
-										class="mosaico_escudo" src="img/times/Bragantino.png" /></a></td>
+								<!-- <td><a href="#" title="Bragantino"><img
+										class="mosaico_escudo" src="img/times/Bragantino.png" /></a></td> -->
 
 
-								<td><a href="#" title="Ceará"> <img
+								<td><a id="ceara" href="#" title="Ceará"> <img
 										class="mosaico_escudo arrumarTamanho"
 										src="img/times/Ceara.png" />
 								</a></td>
 
+								<td><a id="chapecoense" href="#" title="Chapecoense"><img
+										class="mosaico_escudo" src="img/times/Chapecoense.png" /></a></td>
 
-								<td><a href="#" title="Corinthians"> <img
+
+								<td><a id="corinthians" href="#" title="Corinthians"> <img
 										class="mosaico_escudo" src="img/times/Corinthians.png" />
 								</a></td>
 
 
 
-								<td><a href="#" title="Coritiba"> <img
+								<!-- <td><a href="#" title="Coritiba"> <img
 										class="mosaico_escudo" src="img/times/Coritiba.png" />
+								</a></td>
+ -->
+
+								<td><a id="cruzeiro" href="#" title="Cruzeiro"> <img
+										class="mosaico_escudo" src="img/times/Cruzeiro.png" />
+								</a></td>
+
+								<td><a id="csa" href="#" title="CSA"> <img
+										class="mosaico_escudo" src="img/times/Csa.png" />
 								</a></td>
 
 
-								<td><a href="#" title="Flamengo"><img
-										class="mosaico_escudo" src="img/times/Flamengo.png" /> </a></td>
 
 							</tr>
 
 
 							<tr>
 
-
-								<td><a href="#" title="Fluminense"><img
+								<td><a id="flamengo" href="#" title="Flamengo"><img
+										class="mosaico_escudo" src="img/times/Flamengo.png" /> </a></td>
+								<td><a id="fluminense" href="#" title="Fluminense"><img
 										class="mosaico_escudo" src="img/times/Fluminense.png" /></a></td>
 
 
-								<td><a href="#" title="Fortaleza"> <img
+								<td><a id="fortaleza" href="#" title="Fortaleza"> <img
 										class="mosaico_escudo arrumarTamanho"
 										src="img/times/Fortaleza.png" />
 								</a></td>
 
 
-
-
-
-								<td><a href="#" title="Goiás"><img
+								<td><a id="goias" href="#" title="Goiás"><img
 										class="mosaico_escudo" src="img/times/Goias.png" /></a></td>
-								<td><a href="#" title="Grêmio"> <img
+
+
+								<td><a id="gremio" href="#" title="Grêmio"> <img
 										class="mosaico_escudo" src="img/times/Gremio.png" /></a></td>
 
-								<td><a href="#" title="Internacional"><img
-										class="mosaico_escudo" src="img/times/Internacional.png" /> </a>
-								</td>
+
 
 							</tr>
 
 							<tr>
 
-
-								<td><a href="#" title="Palmeiras"><img
+								<td><a id="internacional" href="#" title="Internacional"><img
+										class="mosaico_escudo" src="img/times/Internacional.png" /> </a>
+								</td>
+								<td><a id="palmeiras" href="#" title="Palmeiras"><img
 										class="mosaico_escudo arrumarTamanho"
 										src="img/times/Palmeiras.png" /> </a></td>
 
-								<td><a href="#" title="Santos"><img
+								<td><a id="santos" href="#" title="Santos"><img
 										class="mosaico_escudo arrumarTamanho"
 										src="img/times/Santos.png" /> </a></td>
 
-								<td><a href="#" title="São Paulo"><img
+								<td><a id="saoPaulo" href="#" title="São Paulo"><img
 										class="mosaico_escudo" src="img/times/SaoPaulo.png" /> </a></td>
 
-								<td><a href="#" title="Sport"> <img
+								<!-- <td><a href="#" title="Sport"> <img
 										class="mosaico_escudo" src="img/times/Sport.png"
 										style="width: 50px" />
-								</a></td>
+								</a></td> -->
 
-								<td><a href="#" title="Vasco"><img
+								<td><a id="vasco" href="#" title="Vasco"><img
 										class="mosaico_escudo arrumarTamanho"
 										src="img/times/Vasco.png" /> </a></td>
 
@@ -172,64 +191,318 @@
 
 		<div class="row ajustandoEspacos">
 			<div class="col-3"></div>
-			<div class="col-4 estruturaFotoCamisaTime">
+			<div class="col-4 ">
 
 
-				<!--  AQUI -->
-				<div class="deslizantes ativo ">
+				<!--  CAMISAS DOS TIMES -->
+
+				<div class="atlePr ativo">
+
+
+
 					<div style="text-align: center;">
-						<h5>Camisa 1</h5>
+						<h5>Camisa Umbro Athletico Paranaense I 2019</h5>
+
 						<div class="flex-card">
-							<div class="product-card wow bounceInUp">
-								<div class="product-front">
-									<div class="shadow"></div>
-									<img src="img/camisasTimes/AthleticoPr/Camisa1.jpg" alt="" />
-									<div class="image_overlay"></div>
-								</div>
+
+							<img src="img/camisasTimes/AthleticoPr/Camisa1.png"
+								class="tamanhoFotoCamisa" />
+
+
+						</div>
+
+					</div>
+				</div>
+
+
+
+
+				<div class="atleMg">
+
+					<div class="centralizar">
+						<h5>Camisa Le Coq Sportif Atlético Mineiro I 2019</h5>
+						<div class="flex-card">
+
+							<img src="img/camisasTimes/AtleticoMg/Camisa1.png"
+								class="tamanhoFotoCamisa" />
+
+						</div>
+					</div>
+
+				</div>
+
+
+
+
+				<div class="avai">
+
+					<div class="centralizar">
+						<h5>Camisa Umbro Avaí I 2019</h5>
+						<div class="flex-card">
+							<img src="img/camisasTimes/Avai/Camisa1.png"
+								class="tamanhoFotoCamisa" />
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="bahia">
+
+					<div class="centralizar">
+						<h5>Camisa Esquadrão Bahia II 2019</h5>
+						<div class="flex-card">
+							<img src="img/camisasTimes/Bahia/Camisa1.png"
+								class="tamanhoFotoCamisa" />
+						</div>
+					</div>
+				</div>
+
+
+				<div class="botafogo">
+
+					<div class="centralizar">
+						<h5>Camisa Kappa Botafogo I 2019</h5>
+						<div class="flex-card">
+							<img src="img/camisasTimes/Botafogo/Camisa1.png"
+								class="tamanhoFotoCamisa" />
+						</div>
+					</div>
+				</div>
+
+
+				<div class="ceara">
+
+					<div class="centralizar">
+						<h5>Camisa Topper Ceará I 2019</h5>
+						<div class="flex-card">
+							<img src="img/camisasTimes/Ceara/Camisa1.png"
+								class="tamanhoFotoCamisa" />
+						</div>
+					</div>
+				</div>
+
+
+				<div class="chapecoense">
+
+					<div class="centralizar">
+						<h5>Camisa Umbro Chapecoense I 2019</h5>
+						<div class="flex-card">
+							<img src="img/camisasTimes/Chapecoense/Camisa1.png"
+								class="tamanhoFotoCamisa" />
+						</div>
+					</div>
+				</div>
+
+
+				<div class="corinthians">
+
+					<div class="centralizar">
+						<h5>Camisa Nike Corinthians I 2019</h5>
+						<div class="flex-card">
+							<img src="img/camisasTimes/Corinthians/Camisa1.png"
+								class="tamanhoFotoCamisa" />
+						</div>
+					</div>
+				</div>
+
+
+				<div class="cruzeiro">
+
+					<div class="centralizar">
+						<h5>Camisa Umbro Cruzeiro I 2019</h5>
+						<div class="flex-card">
+							<img src="img/camisasTimes/Cruzeiro/Camisa1.png"
+								class="tamanhoFotoCamisa" />
+						</div>
+					</div>
+				</div>
+
+
+				<div class="csa">
+
+					<div class="centralizar">
+						<h5>Camisa Azulão CSA I 2019</h5>
+						<div class="flex-card">
+							<img src="img/camisasTimes/Csa/Camisa1.png"
+								class="tamanhoFotoCamisa" />
+						</div>
+					</div>
+				</div>
+
+
+				<div class="flamengo">
+
+					<div class="centralizar">
+						<h5>Camisa Flamengo Fla-Tri Zico</h5>
+						<div class="flex-card">
+							<img src="img/camisasTimes/Flamengo/Camisa1.png"
+								class="tamanhoFotoCamisa" />
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<div class="fluminense">
+
+					<div class="centralizar">
+						<h5>Camisa Under Armour Fluminense I 2019</h5>
+						<div class="flex-card">
+							<img src="img/camisasTimes/Fluminense/Camisa1.png"
+								class="tamanhoFotoCamisa" />
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="fortaleza">
+
+					<div class="centralizar">
+						<h5>Camisa Leão 1918 Fortaleza II 2019</h5>
+						<div class="flex-card">
+							<img src="img/camisasTimes/Fortaleza/Camisa1.png"
+								class="tamanhoFotoCamisa" />
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="goias">
+
+					<div class="centralizar">
+						<h5>Camisa Gr33n Goiás I 2019</h5>
+						<div class="flex-card">
+							<img src="img/camisasTimes/Goias/Camisa1.png"
+								class="tamanhoFotoCamisa" />
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="gremio">
+
+					<div class="centralizar">
+						<h5>Camisa Umbro Grêmio I 2019</h5>
+						<div class="flex-card">
+							<img src="img/camisasTimes/Gremio/Camisa1.png"
+								class="tamanhoFotoCamisa" />
+						</div>
+					</div>
+				</div>
+
+
+				<div class="internacional">
+
+					<div class="centralizar">
+						<h5>Camisa Internacional 1922 Retrô</h5>
+						<div class="flex-card">
+							<img src="img/camisasTimes/Internacional/Camisa1.png"
+								class="tamanhoFotoCamisa" />
+						</div>
+					</div>
+				</div>
+
+
+				<div class="palmeiras">
+
+					<div class="centralizar">
+						<h5>Camisa Puma Palmeiras I 2019</h5>
+						<div class="flex-card">
+							<img src="img/camisasTimes/Palmeiras/Camisa1.png"
+								class="tamanhoFotoCamisa" />
+						</div>
+					</div>
+
+
+					<div class="santos">
+
+						<div class="centralizar">
+							<h5>Camisa Umbro Santos I 2019</h5>
+							<div class="flex-card">
+								<img src="img/camisasTimes/Santos/Camisa1.png"
+									class="tamanhoFotoCamisa" />
 							</div>
 						</div>
+
+
+						<div class="saoPaulo">
+
+							<div class="centralizar">
+								<h5>Camisa Adidas São Paulo I 2019</h5>
+								<div class="flex-card">
+									<img src="img/camisasTimes/SaoPaulo/Camisa1.png"
+										class="tamanhoFotoCamisa" />
+								</div>
+							</div>
+
+
+
+							<div class="vasco">
+
+								<div class="centralizar">
+									<h5>Camisa Diadora Vasco III 2018</h5>
+									<div class="flex-card">
+										<img src="img/camisasTimes/Vasco/Camisa1.png"
+											class="tamanhoFotoCamisa" />
+									</div>
+								</div>
+
+
+
+							</div>
+						</div>
+
+
+
+
+
 					</div>
 				</div>
 			</div>
 
+			<div class="col-4">
+
+				<h:form>
+
+					<h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="3">
+						<p:outputLabel for="tamanhoCamisa" value="Tamanho:" />
+						<p:selectOneRadio id="tamanhoCamisa"
+							value="#{tamanhoCamisa.tamanhoCamisa}" unselectable="true">
+
+							<table>
+								<tr>
+									<th><f:selectItem itemLabel="GG" itemValue="GG" /></th>
+									<th><f:selectItem itemLabel="G" itemValue="G" /></th>
+									<td><f:selectItem itemLabel="M" itemValue="M" /></td>
+									<td><f:selectItem itemLabel="P" itemValue="P" /></td>
+								</tr>
+							</table>
+
+						</p:selectOneRadio>
 
 
+						<button class="btn btn-primary" type="submit">Continuar</button>
 
-			<h:form>
-
-				<h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="3">
-					<p:outputLabel for="tamanhoCamisa" value="Tamanho:" />
-					<p:selectOneRadio id="tamanhoCamisa"
-						value="#{tamanhoCamisa.tamanhoCamisa}" unselectable="true">
-
-						<table>
-							<tr>
-								<th><f:selectItem itemLabel="GG" itemValue="GG" /></th>
-								<th><f:selectItem itemLabel="G" itemValue="G" /></th>
-								<td><f:selectItem itemLabel="M" itemValue="M" /></td>
-								<td><f:selectItem itemLabel="P" itemValue="P" /></td>
-							</tr>
-						</table>
-
-					</p:selectOneRadio>
+					</h:panelGrid>
 
 
-					<button class="btn btn-primary" type="submit">Continuar</button>
+				</h:form>
 
-				</h:panelGrid>
-
-
-			</h:form>
+			</div>
 
 		</div>
-
-
-
-
-
-
-
 	</div>
+
+
+	<script src="jquery/jquery.min.js"></script>
+	<!-- <script src="js/popper.min.js"></script> -->
+	<!-- <script src="bootstrap/bootstrap.min.js"></script> -->
+	<script src="js/main.js"></script>
 </h:body>
 
 </html>
