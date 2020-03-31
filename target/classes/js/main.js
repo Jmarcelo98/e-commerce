@@ -131,7 +131,7 @@ function abaProdutos() {
 								'.atlePr, .atleMg, .avai, .bahia, .botafogo, .ceara, .chapecoense, .corinthians, .csa, .flamengo, .fluminense, .fortaleza, .gremio, .goias, .internacional, .palmeiras, .santos, .saoPaulo, .vasco')
 								.fadeOut();
 						setTimeout(function() {
-							$('.cuzeiro').fadeIn();
+							$('.cruzeiro').fadeIn();
 						}, 400);
 					});
 
@@ -212,7 +212,7 @@ function abaProdutos() {
 					function(event) {
 						event.preventDefault();
 						$(
-								'.atlePr, .atleMg, .avai, .bahia, .botafogo, .ceara, .chapecoense, .corinthians, .cruzeiro, .csa, .flamengo, .fluminense, .fortaleza, .goias, , .gremio, .palmeiras, .santos, .saoPaulo, .vasco')
+								'.atlePr, .atleMg, .avai, .bahia, .botafogo, .ceara, .chapecoense, .corinthians, .cruzeiro, .csa, .flamengo, .fluminense, .fortaleza, .goias, .gremio, .palmeiras, .santos, .saoPaulo, .vasco')
 								.fadeOut();
 						setTimeout(function() {
 							$('.internacional').fadeIn();
@@ -231,8 +231,6 @@ function abaProdutos() {
 						}, 400);
 					});
 
-	
-	
 	$("#santos")
 			.click(
 					function(event) {
@@ -244,30 +242,29 @@ function abaProdutos() {
 							$('.santos').fadeIn();
 						}, 400);
 					});
-	
-	
+
 	$("#saoPaulo")
-	.click(
-			function(event) {
-				event.preventDefault();
-				$(
-						'.atlePr, .atleMg, .avai, .bahia, .botafogo, .ceara, .chapecoense, .corinthians, .cruzeiro, .csa, .flamengo, .fluminense, .fortaleza, .goias, .gremio, .internacional, .palmeiras, .santos , .vasco')
-						.fadeOut();
-				setTimeout(function() {
-					$('.saoPaulo').fadeIn();
-				}, 400);
-			});
-	
+			.click(
+					function(event) {
+						event.preventDefault();
+						$(
+								'.atlePr, .atleMg, .avai, .bahia, .botafogo, .ceara, .chapecoense, .corinthians, .cruzeiro, .csa, .flamengo, .fluminense, .fortaleza, .goias, .gremio, .internacional, .palmeiras, .santos , .vasco')
+								.fadeOut();
+						setTimeout(function() {
+							$('.saoPaulo').fadeIn();
+						}, 400);
+					});
+
 	$("#vasco")
-	.click(
-			function(event) {
-				event.preventDefault();
-				$(
-						'.atlePr, .atleMg, .avai, .bahia, .botafogo, .ceara, .chapecoense, .corinthians, .cruzeiro, .csa, .flamengo, .fluminense, .fortaleza, .goias, .gremio, .internacional, .palmeiras, .santos, .saoPaulo')
-						.fadeOut();
-				setTimeout(function() {
-					$('.vasco').fadeIn();
-				}, 400);
-			});
+			.click(
+					function(event) {
+						event.preventDefault();
+						$(
+								'.atlePr, .atleMg, .avai, .bahia, .botafogo, .ceara, .chapecoense, .corinthians, .cruzeiro, .csa, .flamengo, .fluminense, .fortaleza, .goias, .gremio, .internacional, .palmeiras, .santos, .saoPaulo')
+								.fadeOut();
+						setTimeout(function() {
+							$('.vasco').fadeIn();
+						}, 400);
+					});
 
 }
