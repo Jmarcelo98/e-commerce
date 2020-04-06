@@ -9,11 +9,6 @@ function abaProdutos() {
 			.click(
 					function(event) {
 
-						var teste = 1;
-
-						alert(teste);
-						
-
 						event.preventDefault();
 
 						$(
@@ -23,7 +18,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.atlePr').fadeIn();
 						}, 400);
-
+						$('#teste2').val('Athletico Paranaense');
 					}
 
 			);
@@ -31,6 +26,7 @@ function abaProdutos() {
 	$("#atleticoMg")
 			.click(
 					function(event) {
+
 						event.preventDefault();
 						$(
 								'.atlePr, .avai, .bahia, .botafogo, .ceara, .chapecoense, .corinthians, .cruzeiro, .csa, .flamengo, .fluminense, .fortaleza, .gremio, .goias, .internacional, .palmeiras, .santos, .saoPaulo, .vasco')
@@ -39,6 +35,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.atleMg').fadeIn();
 						}, 400);
+						$('#teste2').val('Atlético Mineiro');
 					});
 
 	$("#avai")
@@ -51,6 +48,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.avai').fadeIn();
 						}, 400);
+						$('#teste2').val('Avaí');
 					});
 
 	$("#bahia")
@@ -63,6 +61,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.bahia').fadeIn();
 						}, 400);
+						$('#teste2').val('Bahia');
 					});
 
 	$("#botafogo")
@@ -75,6 +74,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.botafogo').fadeIn();
 						}, 400);
+						$('#teste2').val('Botafogo');
 					});
 
 	$("#ceara")
@@ -87,6 +87,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.ceara').fadeIn();
 						}, 400);
+						$('#teste2').val('Ceará');
 					});
 
 	$("#chapecoense")
@@ -99,6 +100,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.chapecoense').fadeIn();
 						}, 400);
+						$('#teste2').val('Chapecoense');
 					});
 
 	$("#corinthians")
@@ -111,6 +113,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.corinthians').fadeIn();
 						}, 400);
+						$('#teste2').val('Corinthians');
 					});
 
 	$("#cruzeiro")
@@ -123,6 +126,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.cruzeiro').fadeIn();
 						}, 400);
+						$('#teste2').val('Cruzeiro');
 					});
 
 	$("#csa")
@@ -135,6 +139,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.csa').fadeIn();
 						}, 400);
+						$('#teste2').val('CSA');
 					});
 
 	$("#flamengo")
@@ -147,6 +152,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.flamengo').fadeIn();
 						}, 400);
+						$('#teste2').val('Flamengo');
 					});
 
 	$("#fluminense")
@@ -159,6 +165,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.fluminense').fadeIn();
 						}, 400);
+						$('#teste2').val('Fluminense');
 					});
 
 	$("#fortaleza")
@@ -171,6 +178,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.fortaleza').fadeIn();
 						}, 400);
+						$('#teste2').val('Fortaleza');
 					});
 
 	$("#goias")
@@ -183,6 +191,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.goias').fadeIn();
 						}, 400);
+						$('#teste2').val('Goiás');
 					});
 
 	$("#gremio")
@@ -195,6 +204,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.gremio').fadeIn();
 						}, 400);
+						$('#teste2').val('Grêmio');
 					});
 
 	$("#internacional")
@@ -207,6 +217,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.internacional').fadeIn();
 						}, 400);
+						$('#teste2').val('Internacional');
 					});
 
 	$("#palmeiras")
@@ -219,6 +230,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.palmeiras').fadeIn();
 						}, 400);
+						$('#teste2').val('Palmeiras');
 					});
 
 	$("#santos")
@@ -231,6 +243,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.santos').fadeIn();
 						}, 400);
+						$('#teste2').val('Santos');
 					});
 
 	$("#saoPaulo")
@@ -243,6 +256,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.saoPaulo').fadeIn();
 						}, 400);
+						$('#teste2').val('São Paulo');
 					});
 
 	$("#vasco")
@@ -255,6 +269,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.vasco').fadeIn();
 						}, 400);
+						$('#teste2').val('Vasco');
 					});
 
 }

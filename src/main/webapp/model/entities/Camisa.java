@@ -8,8 +8,8 @@ import javax.faces.bean.RequestScoped;
 public class Camisa {
 
 	private String tamanhoCamisa;
-	private String txt1;
-	private String quantidade;
+	private String timeEscolhido;
+	private int quantidade;
 
 	public String getTamanhoCamisa() {
 		return tamanhoCamisa;
@@ -17,26 +17,25 @@ public class Camisa {
 
 	public void setTamanhoCamisa(String tamanhoCamisa) {
 		this.tamanhoCamisa = tamanhoCamisa;
-		System.out.println(tamanhoCamisa);
+		System.out.println("tamanho: " + tamanhoCamisa);
 	}
 
-	public String getTxt1() {
-		return txt1;
+	public String getTimeEscolhido() {
+		return timeEscolhido;
 	}
 
-	public void setTxt1(String txt1) {
-		this.txt1 = txt1;
-		System.out.println(txt1);
+	public void setTimeEscolhido(String timeEscolhido) {
+		this.timeEscolhido = timeEscolhido;
+		System.out.println("time: " + timeEscolhido);
 	}
 
-	public String getQuantidade() {
+	public int getQuantidade() {
 		return quantidade;
 	}
 
-	public void setQuantidade(String quantidade) {
+	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
-		System.out.println(quantidade);
+		System.out.println("quantidade: " + quantidade);
 	}
-
 
 }

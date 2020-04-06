@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui"
-	xmlns:f="http://java.sun.com/jsf/core">
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:pe="http://primefaces.org/ui/extensions">
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>LOUCOS POR FUTEBOL STORE</title>
@@ -18,26 +19,6 @@
 	<script type="text/javascript"
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" />
 
-	<style type="text/css">
-.ui-datalist .ui-datalist-content {
-	border: 0 none
-}
-
-.ui-datalist ul {
-	padding: 0px 10px 0 20px;
-	margin: 5px 0;
-}
-
-.value {
-	font-weight: bold;
-}
-
-.ui-autocomplete-itemtip {
-	-moz-box-sizing: content-box;
-	-webkit-box-sizing: content-box;
-	box-sizing: content-box;
-}
-</style>
 
 
 </h:head>
@@ -76,7 +57,7 @@
 						<table style="height: 270px; width: 300px;">
 							<tr>
 								<th><a id="athleticoPr" href="#"
-									title="Athletico Paranaense" onclick="teste()"> <img
+									title="Athletico Paranaense"> <img
 										class="mosaico_escudo arrumarTamanho"
 										src="img/times/AthleticoPR.png" />
 								</a></th>
@@ -462,23 +443,17 @@
 
 			<div class="col-4">
 
-				<h:form>
+				<h:form prependId="false">
 
 
-					<!--   <div>
+					<p:inputText id="teste2" readonly="readonly"
+						value="#{camisa.timeEscolhido}"></p:inputText>
 
-						<input id="teste2" value="#{camisa.txt1}" />
-
-					</div>  -->
-
-
-
-
-					<p:inputText id="teste2"> Time: </p:inputText>
 
 					<div class="ajustandoEspacos"></div>
 
 					<h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="3">
+
 
 
 
@@ -498,9 +473,13 @@
 						</p:selectOneRadio>
 
 
+
+
+
 						<p:outputLabel for="quantidade" value="Quantidade: " />
 						<p:inputText id="quantidade" value="#{camisa.quantidade}"
-							type="number" maxlength="2" />
+							maxlength="2"
+							onkeyup="$(this).val($(this).val().replace(/[^0-9]/g, ''));" />
 
 
 						<div class="ajustandoEspacos"></div>
@@ -512,6 +491,8 @@
 
 
 				</h:form>
+
+
 
 			</div>
 
