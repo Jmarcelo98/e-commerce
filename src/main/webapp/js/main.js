@@ -2,6 +2,10 @@ $(function() {
 	abaProdutos();
 })
 
+$(document).ready(function(){
+	$('#teste2').val('Athletico Paranaense');
+ });
+
 function abaProdutos() {
 
 	// ABA DE CAMISAS//

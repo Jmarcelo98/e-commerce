@@ -1,5 +1,7 @@
 package model.entities;
 
+import java.util.ArrayList;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
@@ -10,6 +12,8 @@ public class Camisa {
 	private String tamanhoCamisa;
 	private String timeEscolhido;
 	private int quantidade;
+
+	private ArrayList<String> carrinho;
 
 	public String getTamanhoCamisa() {
 		return tamanhoCamisa;
@@ -36,6 +40,18 @@ public class Camisa {
 	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
 		System.out.println("quantidade: " + quantidade);
+	}
+
+	public void adicionarAoCarrinho() {
+
+		String quantiString = Integer.toString(getQuantidade());
+
+		/*
+		 * carrinho.add(getTimeEscolhido() + getTamanhoCamisa() + quantiString);
+		 * 
+		 * System.out.println(carrinho);
+		 */
+
 	}
 
 }

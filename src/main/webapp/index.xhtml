@@ -17,7 +17,11 @@
 		href="#{request.contextPath}/css/main.css" />
 
 	<script type="text/javascript"
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" />
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+
+	</script>
+
+
 
 
 
@@ -446,7 +450,7 @@
 				<h:form prependId="false">
 
 
-					
+
 
 
 					<div class="ajustandoEspacos"></div>
@@ -482,20 +486,30 @@
 
 
 						<div class="ajustandoEspacos"></div>
-						
-						<p:inputText style="visibility: hidden" id="teste2" readonly="readonly"
-						value="#{camisa.timeEscolhido}"></p:inputText>
-						
-						<div class="ajustandoEspacos"></div>
-						
-						
 
-						<button class="btn btn-primary" type="submit">Continuar</button>
+						<p:inputText style="visibility: hidden" id="teste2"
+							readonly="readonly" value="#{camisa.timeEscolhido}"></p:inputText>
+
+						<div class="ajustandoEspacos"></div>
+
+
+
+						<button class="btn btn-primary" type="submit">Adicionar
+							ao carrinho</button>
 
 					</h:panelGrid>
 
 
 				</h:form>
+
+				<div>
+
+					<input value="#{camisa.adicionarAoCarrinho()}" />
+
+				</div>
+
+
+
 
 
 
