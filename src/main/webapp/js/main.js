@@ -2,9 +2,13 @@ $(function() {
 	abaProdutos();
 })
 
-$(document).ready(function(){
+$(document).ready(function() {
+	$('#quantidade').val($(this).val().replace(/^0+/, ''));
+});
+
+$(document).ready(function() {
 	$('#teste2').val('Athletico Paranaense');
- });
+});
 
 function abaProdutos() {
 
@@ -39,7 +43,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.atleMg').fadeIn();
 						}, 400);
-						$('#teste2').val('Atlético Mineiro');
+						$('#teste2').val('Atletico Mineiro');
 					});
 
 	$("#avai")
@@ -52,7 +56,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.avai').fadeIn();
 						}, 400);
-						$('#teste2').val('Avaí');
+						$('#teste2').val('Avai');
 					});
 
 	$("#bahia")
@@ -91,7 +95,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.ceara').fadeIn();
 						}, 400);
-						$('#teste2').val('Ceará');
+						$('#teste2').val('Ceara');
 					});
 
 	$("#chapecoense")
@@ -195,7 +199,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.goias').fadeIn();
 						}, 400);
-						$('#teste2').val('Goiás');
+						$('#teste2').val('Goias');
 					});
 
 	$("#gremio")
@@ -208,7 +212,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.gremio').fadeIn();
 						}, 400);
-						$('#teste2').val('Grêmio');
+						$('#teste2').val('Gremio');
 					});
 
 	$("#internacional")
@@ -260,7 +264,7 @@ function abaProdutos() {
 						setTimeout(function() {
 							$('.saoPaulo').fadeIn();
 						}, 400);
-						$('#teste2').val('São Paulo');
+						$('#teste2').val('Sao Paulo');
 					});
 
 	$("#vasco")

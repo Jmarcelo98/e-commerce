@@ -13,7 +13,7 @@ public class Camisa {
 	private String timeEscolhido;
 	private int quantidade;
 
-	private ArrayList<String> carrinho;
+	private ArrayList<String> carrinho = new ArrayList<>(10);
 
 	public String getTamanhoCamisa() {
 		return tamanhoCamisa;
@@ -44,13 +44,27 @@ public class Camisa {
 
 	public void adicionarAoCarrinho() {
 
-		String quantiString = Integer.toString(getQuantidade());
+		if (getTamanhoCamisa() == "") {
+			System.out.println("teste");
+		}
 
-		/*
-		 * carrinho.add(getTimeEscolhido() + getTamanhoCamisa() + quantiString);
-		 * 
-		 * System.out.println(carrinho);
-		 */
+		if (getQuantidade() < 1 || getTamanhoCamisa() == null || getTamanhoCamisa() == " " || getTimeEscolhido() == null
+				|| getTimeEscolhido() == " ") {
+
+			System.out.println("quant " + getQuantidade());
+			System.out.println("taman " + getTamanhoCamisa());
+			System.out.println("time " + getTimeEscolhido());
+			// primeiro retorno é vazio, e não irá fazer nada
+
+		} else {
+
+			String quantiString = Integer.toString(getQuantidade());
+
+			carrinho.add(getTimeEscolhido() + " " + getTamanhoCamisa() + " " + quantiString);
+
+			System.out.println(carrinho);
+
+		}
 
 	}
 

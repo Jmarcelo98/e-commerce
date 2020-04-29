@@ -18,11 +18,12 @@
 
 	<script type="text/javascript"
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+		function validar() {
 
+			alert('oi')
+
+		}
 	</script>
-
-
-
 
 
 </h:head>
@@ -31,10 +32,16 @@
 <h:body>
 
 
-
-
+	<!-- 
 	<div class="cabecalho"
-		style="background-image: url('img/header/LogoLoja.png')" />
+		style="background-image: url('img/header/LogoLoja.png')" />  -->
+
+	<div class="cabecalho">
+
+		<a href="#" id="logoInicio" onclick="resetar()"> <img
+			src="img/header/LogoLoja.png" style="height: 150px" /></a>
+
+	</div>
 
 
 
@@ -447,17 +454,11 @@
 
 			<div class="col-4">
 
-				<h:form prependId="false">
-
-
-
-
+				<h:form prependId="false" id="formCamisa">
 
 					<div class="ajustandoEspacos"></div>
 
 					<h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="3">
-
-
 
 
 						<p:outputLabel for="tamanhoCamisa" value="Tamanho:" />
@@ -477,12 +478,12 @@
 
 
 
-
-
 						<p:outputLabel for="quantidade" value="Quantidade: " />
 						<p:inputText id="quantidade" value="#{camisa.quantidade}"
-							maxlength="2"
-							onkeyup="$(this).val($(this).val().replace(/[^0-9]/g, ''));" />
+							maxlength="2" placeholder="Quantidade de camisa"
+							onkeyup="$(this).val($(this).val().replace(/[^0-9]/g, '')); $(this).val($(this).val().replace(/^0+/, ''));"
+							/>
+
 
 
 						<div class="ajustandoEspacos"></div>
@@ -492,21 +493,21 @@
 
 						<div class="ajustandoEspacos"></div>
 
-
-
-						<button class="btn btn-primary" type="submit">Adicionar
-							ao carrinho</button>
-
 					</h:panelGrid>
 
+					<p:commandButton value="Adicionar ao carrinho" type="submit"
+						onclick="carrinho" />
 
 				</h:form>
 
-				<div>
+				<div id="carrinho">
 
-					<input value="#{camisa.adicionarAoCarrinho()}" />
+					<input value="#{camisa.adicionarAoCarrinho()}"
+						style="visibility: hidden" />
 
 				</div>
+
+
 
 
 
