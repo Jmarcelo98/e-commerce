@@ -1,7 +1,5 @@
 package model.entities;
 
-import java.util.ArrayList;
-
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
@@ -12,8 +10,6 @@ public class Camisa {
 	private String tamanhoCamisa;
 	private String timeEscolhido;
 	private int quantidade;
-
-	private ArrayList<String> carrinho = new ArrayList<>(10);
 
 	public String getTamanhoCamisa() {
 		return tamanhoCamisa;
@@ -44,25 +40,20 @@ public class Camisa {
 
 	public void adicionarAoCarrinho() {
 
-		if (getTamanhoCamisa() == "") {
-			System.out.println("teste");
-		}
+		if (getQuantidade() == 0 || getTamanhoCamisa() == null || getTamanhoCamisa() == " "
+				|| getTimeEscolhido() == null || getTimeEscolhido() == " ") {
 
-		if (getQuantidade() < 1 || getTamanhoCamisa() == null || getTamanhoCamisa() == " " || getTimeEscolhido() == null
-				|| getTimeEscolhido() == " ") {
-
-			System.out.println("quant " + getQuantidade());
-			System.out.println("taman " + getTamanhoCamisa());
-			System.out.println("time " + getTimeEscolhido());
 			// primeiro retorno é vazio, e não irá fazer nada
 
 		} else {
 
 			String quantiString = Integer.toString(getQuantidade());
 
-			carrinho.add(getTimeEscolhido() + " " + getTamanhoCamisa() + " " + quantiString);
+			System.out.println("time " + getTimeEscolhido());
+			System.out.println("taman " + getTamanhoCamisa());
+			System.out.println("quant " + quantiString);
 
-			System.out.println(carrinho);
+			System.out.println();
 
 		}
 

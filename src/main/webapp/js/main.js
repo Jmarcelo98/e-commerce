@@ -2,14 +2,37 @@ $(function() {
 	abaProdutos();
 })
 
+//CARREGAR PAGINA, E TIRAR O 0 DA QUANTIDADE
 $(document).ready(function() {
 	$('#quantidade').val($(this).val().replace(/^0+/, ''));
 });
 
+//AO CARREGAR PAGINA, ATRIBUIR O VALOR DO ATLETICO PR PARA A VARIAVEL TESTE2
 $(document).ready(function() {
 	$('#teste2').val('Athletico Paranaense');
 });
 
+//APOS ADD NO CARRINHO, ZERAR TODAS AS INFORMAÇÕES
+$("#addCarrinho")
+		.click(
+				function() {
+					$('#formCamisa')[0].reset();
+					$(
+							'.atleMg, .avai, .bahia, .botafogo, .ceara, .chapecoense, .corinthians, .cruzeiro, .csa, .flamengo, .fluminense, .fortaleza, .gremio, .goias, .internacional, .palmeiras, .santos, .saoPaulo, .vasco')
+							.fadeOut();
+
+					setTimeout(function() {
+						$('.atlePr').fadeIn();
+					}, 400);
+					$('#teste2').val('Athletico Paranaense');
+					$(document).ready(function() {
+						$('#quantidade').val($(this).val().replace(/^0+/, ''));
+					});
+				});
+
+
+
+//FADE IN E FADE OUT DOS TIMES
 function abaProdutos() {
 
 	// ABA DE CAMISAS//

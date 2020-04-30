@@ -18,11 +18,7 @@
 
 	<script type="text/javascript"
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
-		function validar() {
-
-			alert('oi')
-
-		}
+		
 	</script>
 
 
@@ -31,28 +27,28 @@
 
 <h:body>
 
-
-	<!-- 
-	<div class="cabecalho"
-		style="background-image: url('img/header/LogoLoja.png')" />  -->
-
+	<!-- CABEÇALHO -->
 	<div class="cabecalho">
 
-		<a href="#" id="logoInicio" onclick="resetar()"> <img
-			src="img/header/LogoLoja.png" style="height: 150px" /></a>
+		<a id="logoInicio"> <img src="img/header/LogoLoja.png"
+			style="height: 150px" /></a>
 
 	</div>
+	<!-- FIM CABEÇALHO -->
 
 
 
-	<!--  ESCOLHA SEU TIME DO CORAÇÃO -->
+
 	<div class="container">
 
+		<!--  ESCOLHA SEU TIME DO CORAÇÃO-->
 		<div class="ajustandoEspacos">
 			<h2>Escolha seu time do coração</h2>
 		</div>
+		<!-- FIM ESCOLHA SEU TIME DO CORAÇÃO-->
 
 
+		<!-- LOGO DOS TIMES -->
 		<div class="fundoDoMoisacoEscudos"
 			style="background-image: url('img/fundoDosTimes/fundoTorcedor.png'); background-position: center; background-repeat: no-repeat;">
 
@@ -176,6 +172,8 @@
 				</div>
 			</div>
 		</div>
+		<!-- FIM LOGO DOS TIMES -->
+
 
 
 
@@ -185,7 +183,7 @@
 			<div class="col-4 ">
 
 
-				<!--  CAMISAS DOS TIMES -->
+				<!--  CAMISAS DOS TIMES NA TELA -->
 
 				<div class="atlePr ativo">
 
@@ -365,7 +363,7 @@
 				<div class="goias">
 
 					<div class="centralizar">
-						<h5>Camisa Gr33n Goiás I 2019</h5>
+						<h5>Camisa Green Goiás I 2019</h5>
 						<div class="flex-card">
 							<img src="img/camisasTimes/Goias/Camisa1.png"
 								class="tamanhoFotoCamisa" />
@@ -447,20 +445,23 @@
 					</div>
 				</div>
 
+				<!-- FIM CAMISAS DOS TIMES NA TELA -->
+
+
 
 
 
 			</div>
 
+			<!-- FORM -->
 			<div class="col-4">
 
 				<h:form prependId="false" id="formCamisa">
 
-					<div class="ajustandoEspacos"></div>
 
 					<h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="3">
 
-
+						<!-- TAMANHO DA CAMISA -->
 						<p:outputLabel for="tamanhoCamisa" value="Tamanho:" />
 						<p:selectOneRadio id="tamanhoCamisa"
 							value="#{camisa.tamanhoCamisa}" unselectable="true">
@@ -476,42 +477,42 @@
 
 						</p:selectOneRadio>
 
+						<!-- FIM TAMANHO DA CAMISA -->
 
 
+						<!-- QUANTIDADE DE CAMISAS -->
 						<p:outputLabel for="quantidade" value="Quantidade: " />
 						<p:inputText id="quantidade" value="#{camisa.quantidade}"
 							maxlength="2" placeholder="Quantidade de camisa"
-							onkeyup="$(this).val($(this).val().replace(/[^0-9]/g, '')); $(this).val($(this).val().replace(/^0+/, ''));"
-							/>
-
+							onkeyup="$(this).val($(this).val().replace(/[^0-9]/g, '')); $(this).val($(this).val().replace(/^0+/, ''));" />
+						<!-- FIM QUANTIDADE DE CAMISAS -->
 
 
 						<div class="ajustandoEspacos"></div>
-
+						<!-- RECEBER NOME DO TIME AO CLICAR NA CAMISA -->
 						<p:inputText style="visibility: hidden" id="teste2"
 							readonly="readonly" value="#{camisa.timeEscolhido}"></p:inputText>
+						<!-- FIM RECEBER NOME DO TIME AO CLICAR NA CAMISA -->
 
 						<div class="ajustandoEspacos"></div>
 
 					</h:panelGrid>
 
-					<p:commandButton value="Adicionar ao carrinho" type="submit"
-						onclick="carrinho" />
+					<p:commandButton value="Adicionar ao carrinho" id="addCarrinho"
+						type="submit" onclick="carrinho" />
 
 				</h:form>
 
+				<!-- FIM FORM -->
+
+				<!-- ADICIONAR AO CARRINHO -->
 				<div id="carrinho">
 
 					<input value="#{camisa.adicionarAoCarrinho()}"
 						style="visibility: hidden" />
 
 				</div>
-
-
-
-
-
-
+				<!-- FIM ADICIONAR AO CARRINHO -->
 
 
 			</div>
