@@ -10,6 +10,10 @@
 	<title>LOUCOS POR FUTEBOL STORE</title>
 
 	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+		crossorigin="anonymous" />
 	<link rel="stylesheet" type="text/javascript" href="js/main.js" />
 	<link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
 	<link rel="stylesheet" href="bootstrap/bootstrap.css" />
@@ -448,9 +452,6 @@
 				<!-- FIM CAMISAS DOS TIMES NA TELA -->
 
 
-
-
-
 			</div>
 
 			<!-- FORM -->
@@ -458,13 +459,12 @@
 
 				<h:form prependId="false" id="formCamisa">
 
-
-					<h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="3">
+					<h:panelGrid columns="0" style="margin-bottom:5px" cellpadding="3">
 
 						<!-- TAMANHO DA CAMISA -->
-						<p:outputLabel for="tamanhoCamisa" value="Tamanho:" />
+						<p:outputLabel for="tamanhoCamisa" value="Tamanho" />
 						<p:selectOneRadio id="tamanhoCamisa"
-							value="#{camisa.tamanhoCamisa}" unselectable="true">
+							value="#{camisa.tamanhoCamisa}" unselectable="false">
 
 							<table>
 								<tr>
@@ -476,48 +476,51 @@
 							</table>
 
 						</p:selectOneRadio>
-
 						<!-- FIM TAMANHO DA CAMISA -->
+
+						<div class="ajustandoEspacos"></div>
 
 
 						<!-- QUANTIDADE DE CAMISAS -->
-						<p:outputLabel for="quantidade" value="Quantidade: " />
+						<p:outputLabel for="quantidade" value="Quantidade" />
 						<p:inputText id="quantidade" value="#{camisa.quantidade}"
 							maxlength="2" placeholder="Quantidade de camisa"
 							onkeyup="$(this).val($(this).val().replace(/[^0-9]/g, '')); $(this).val($(this).val().replace(/^0+/, ''));" />
 						<!-- FIM QUANTIDADE DE CAMISAS -->
 
 
-						<div class="ajustandoEspacos"></div>
+						<!-- <div class="ajustandoEspacos"></div> -->
 						<!-- RECEBER NOME DO TIME AO CLICAR NA CAMISA -->
 						<p:inputText style="visibility: hidden" id="teste2"
 							readonly="readonly" value="#{camisa.timeEscolhido}"></p:inputText>
 						<!-- FIM RECEBER NOME DO TIME AO CLICAR NA CAMISA -->
 
-						<div class="ajustandoEspacos"></div>
-
 					</h:panelGrid>
 
-					<p:commandButton value="Adicionar ao carrinho" id="addCarrinho"
-						type="submit" onclick="carrinho" />
+
+
+
+					<p:commandButton value="Comprar" id="addCarrinho" type="submit" action="finalizar"/>
+
 
 				</h:form>
-
 				<!-- FIM FORM -->
-
-				<!-- ADICIONAR AO CARRINHO -->
-				<div id="carrinho">
-
-					<input value="#{camisa.adicionarAoCarrinho()}"
-						style="visibility: hidden" />
-
-				</div>
-				<!-- FIM ADICIONAR AO CARRINHO -->
 
 
 			</div>
+			<!-- FIM DIV FORM -->
+
+
+
+
+
 
 		</div>
+
+
+
+
+
 	</div>
 
 

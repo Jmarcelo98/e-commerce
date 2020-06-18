@@ -2,17 +2,17 @@ $(function() {
 	abaProdutos();
 })
 
-//CARREGAR PAGINA, E TIRAR O 0 DA QUANTIDADE
+// CARREGAR PAGINA, E TIRAR O 0 DA QUANTIDADE
 $(document).ready(function() {
 	$('#quantidade').val($(this).val().replace(/^0+/, ''));
 });
 
-//AO CARREGAR PAGINA, ATRIBUIR O VALOR DO ATLETICO PR PARA A VARIAVEL TESTE2
+// AO CARREGAR PAGINA, ATRIBUIR O VALOR DO ATLETICO PR PARA A VARIAVEL TESTE2
 $(document).ready(function() {
 	$('#teste2').val('Athletico Paranaense');
 });
 
-//APOS ADD NO CARRINHO, ZERAR TODAS AS INFORMAÇÕES
+// APOS ADD NO CARRINHO, ZERAR TODAS AS INFORMAÇÕES
 $("#addCarrinho")
 		.click(
 				function() {
@@ -30,9 +30,7 @@ $("#addCarrinho")
 					});
 				});
 
-
-
-//FADE IN E FADE OUT DOS TIMES
+// FADE IN E FADE OUT DOS TIMES
 function abaProdutos() {
 
 	// ABA DE CAMISAS//

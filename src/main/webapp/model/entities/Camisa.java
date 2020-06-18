@@ -1,11 +1,17 @@
 package model.entities;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
 @ManagedBean
 @RequestScoped
 public class Camisa {
+
+	private double precoCamisas = 99.99;
 
 	private String tamanhoCamisa;
 	private String timeEscolhido;
@@ -38,24 +44,15 @@ public class Camisa {
 		System.out.println("quantidade: " + quantidade);
 	}
 
-	public void adicionarAoCarrinho() {
+	public String valorDasCamisas() {
 
-		if (getQuantidade() == 0 || getTamanhoCamisa() == null || getTamanhoCamisa() == " "
-				|| getTimeEscolhido() == null || getTimeEscolhido() == " ") {
+		DecimalFormat f = new DecimalFormat("#,##0.00", new DecimalFormatSymbols(new Locale("pt", "BR")));
 
-			// primeiro retorno é vazio, e não irá fazer nada
+		Double valor = getQuantidade() * precoCamisas;
 
-		} else {
+		String formatado = f.format(valor);
 
-			String quantiString = Integer.toString(getQuantidade());
-
-			System.out.println("time " + getTimeEscolhido());
-			System.out.println("taman " + getTamanhoCamisa());
-			System.out.println("quant " + quantiString);
-
-			System.out.println();
-
-		}
+		return formatado;
 
 	}
 

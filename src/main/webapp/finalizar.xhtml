@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>FINALIZAR COMPRA</title>
+
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+		crossorigin="anonymous" />
+	<link rel="stylesheet" type="text/javascript" href="js/main.js" />
+	<link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+	<link rel="stylesheet" href="bootstrap/bootstrap.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/css/main.css" />
+
+	<script type="text/javascript"
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+		
+	</script>
+
+
+</h:head>
+
+
+<h:body>
+
+	<!-- CABEÇALHO -->
+	<div class="cabecalho">
+
+		<a href="index.xhtml" id="logoInicio"> <img src="img/header/LogoLoja.png"
+			style="height: 150px" /></a>
+
+	</div>
+	<!-- FIM CABEÇALHO -->
+
+
+	<!-- DADOS DO CLIENTE -->
+	<div class="container ajustandoEspacos">
+
+		<div>
+
+			<div class="row">
+
+				<div class="col-3"></div>
+				<div class="col-6">
+
+					<h:form>
+
+						<table>
+
+							<tr>
+								<th><h6>NOME COMPLETO</h6></th>
+								<th><p:inputText id="nomeCompleto"
+										value="#{cliente.nomeCompleto}" /></th>
+							</tr>
+
+							<tr>
+								<th style="visibility: hidden"></th>
+							</tr>
+							<tr>
+								<th style="visibility: hidden"></th>
+							</tr>
+
+							<tr>
+								<th><h6>CPF</h6></th>
+								<th><p:inputText id="cpfCliente"
+										value="#{cliente.cpfCliente}" /></th>
+							</tr>
+
+							<tr>
+								<th style="visibility: hidden"></th>
+							</tr>
+							<tr>
+								<th style="visibility: hidden"></th>
+							</tr>
+
+							<tr>
+								<th><h6>ENDEREÇO</h6></th>
+								<th><p:inputText id="enredeco" value="#{cliente.endereco}" /></th>
+							</tr>
+
+							<tr>
+								<th style="visibility: hidden"></th>
+							</tr>
+							<tr>
+								<th style="visibility: hidden"></th>
+							</tr>
+
+							<tr>
+								<th><h6>NÚMERO</h6></th>
+								<th><p:inputText id="numero" value="#{cliente.numero}" /></th>
+							</tr>
+
+							<tr>
+								<th style="visibility: hidden"></th>
+							</tr>
+							<tr>
+								<th style="visibility: hidden"></th>
+							</tr>
+
+							<tr>
+								<th><h6>COMPLEMENTO</h6></th>
+								<th><p:inputText id="complemento"
+										value="#{cliente.complemento}" /></th>
+							</tr>
+
+							<tr>
+								<th style="visibility: hidden"></th>
+							</tr>
+							<tr>
+								<th style="visibility: hidden"></th>
+							</tr>
+
+							<tr>
+								<th><h6>EMAIL</h6></th>
+								<th><p:inputText id="email" value="#{cliente.email}" /></th>
+							</tr>
+
+							<tr>
+								<th style="visibility: hidden"></th>
+							</tr>
+							<tr>
+								<th style="visibility: hidden"></th>
+							</tr>
+
+							<tr>
+								<th><h6>TELEFONE</h6></th>
+								<th><p:inputText id="telefone" value="#{cliente.telefone}" /></th>
+							</tr>
+
+
+							<tr>
+								<th style="visibility: hidden"></th>
+							</tr>
+							<tr>
+								<th style="visibility: hidden"></th>
+							</tr>
+
+
+							<!-- RECEBER VALOR DA COMPRA -->
+							<tr>
+								<th><h6>VALOR TOTAL</h6></th>
+								<th><p:inputText value="#{camisa.valorDasCamisas()}"
+										readonly="true" /></th>
+							</tr>
+							<!-- FIM RECEBER VALOR DA COMPRA -->
+
+							<tr>
+								<th style="visibility: hidden"></th>
+							</tr>
+							<tr>
+								<th style="visibility: hidden"></th>
+							</tr>
+
+						</table>
+
+						<!-- FORMA DE PAGAMENTO -->
+						<p:selectOneRadio id="formaPagamento"
+							value="#{cliente.formaPagamento}" unselectable="false">
+
+							<h6>FORMA DE PAGAMENTO</h6>
+							<f:selectItem itemLabel="Boleto Bancário" itemValue="BB" />
+
+						</p:selectOneRadio>
+
+						<br></br>
+						<br></br>
+
+						<div style="text-align: center;">
+							<p:commandButton value="Finalizar Compra" id="finalizarCompra"
+								type="submit" />
+						</div>
+
+					</h:form>
+
+				</div>
+				<div class="col-3"></div>
+
+
+
+			</div>
+
+
+
+
+
+
+
+
+		</div>
+
+
+
+	</div>
+
+
+	<script src="jquery/jquery.min.js"></script>
+	<!-- <script src="js/popper.min.js"></script> -->
+	<!-- <script src="bootstrap/bootstrap.min.js"></script> -->
+	<script src="js/main.js"></script>
+</h:body>
+
+</html>
